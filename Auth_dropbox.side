@@ -1,0 +1,137 @@
+{
+  "id": "a0d70f3c-073f-4f86-8ec0-86eb34438ba5",
+  "version": "2.0",
+  "name": "Auth_dropbox",
+  "url": "https://www.dropbox.com/login",
+  "tests": [{
+    "id": "0b7812bf-dd79-4f05-b6bd-d5f92cfc9838",
+    "name": "Login without any filled text boxes",
+    "commands": [{
+      "id": "ec4dc91a-0bf0-4048-aa0b-a77c76af6b65",
+      "comment": "",
+      "command": "open",
+      "target": "/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "42fa1e1b-4f09-40cb-94b1-fa2d5807048b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.signin-text",
+      "targets": [
+        ["css=.signin-text", "css:finder"],
+        ["xpath=//div[@id='component1421008693176905484']/div/div/div/form/div[3]/button/div", "xpath:idRelative"],
+        ["xpath=//div[3]/button/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d252fbad-c0d4-4ae2-8cb9-d98371553b68",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.signin-button",
+      "targets": [
+        ["css=.signin-button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='component1421008693176905484']/div/div/div/form/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "909e0ab2-1b43-4302-8610-613af9562781",
+      "comment": "",
+      "command": "click",
+      "target": "css=.error-message",
+      "targets": [
+        ["css=.error-message", "css:finder"],
+        ["xpath=//div[@id='component1421008693176905484']/div/div/div/form/div/div/div/span", "xpath:idRelative"],
+        ["xpath=//form/div/div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Wpisz swój adres e-mail.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "98891fd5-2132-4e85-b4b6-5af13fc878ac",
+    "name": "Registration without any data",
+    "commands": [{
+      "id": "b652b6e4-6577-4bb9-9a1e-34a7120cb2cb",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.dropbox.com/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "04e4ceb9-ae72-4253-82c6-dd0d68646405",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=utwórz konto",
+      "targets": [
+        ["linkText=utwórz konto", "linkText"],
+        ["css=.login-register-login-part .login-register-switch-link", "css:finder"],
+        ["xpath=//a[contains(text(),'utwórz konto')]", "xpath:link"],
+        ["xpath=//div[@id='pyxl1387684971271708789']/div/div/div[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[2]", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'utwórz konto')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ef074eff-beff-4ec6-9113-0165ed61620d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.login-button > span",
+      "targets": [
+        ["css=.login-button > span", "css:finder"],
+        ["xpath=//div[@id='component1387684971271708793']/div/form/button/span", "xpath:idRelative"],
+        ["xpath=//button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Utwórz konto')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0aae06a4-0bf5-4228-8ee9-3ad05acbd196",
+      "comment": "",
+      "command": "click",
+      "target": "css=.input-fname .error-message",
+      "targets": [
+        ["css=.input-fname .error-message", "css:finder"],
+        ["xpath=//div[@id='component1387684971271708793']/div/form/div/div/div/div/span", "xpath:idRelative"],
+        ["xpath=//form/div/div/div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Wpisz swoje imię i nazwisko.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "07dfd21c-5c4f-46c7-86bd-0763665be8d4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.input-email .error-message",
+      "targets": [
+        ["css=.input-email .error-message", "css:finder"],
+        ["xpath=//div[@id='component1387684971271708793']/div/form/div/div[2]/div/div/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Wpisz adres e-mail.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c5141772-953e-43b8-89e1-6b3501a40820",
+      "comment": "",
+      "command": "click",
+      "target": "css=.input-password .error-message",
+      "targets": [
+        ["css=.input-password .error-message", "css:finder"],
+        ["xpath=//div[@id='component1387684971271708793']/div/form/div/div[2]/div[2]/div/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Wpisz hasło.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "fefb5191-1113-4252-b910-6d349fe62a4d",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["0b7812bf-dd79-4f05-b6bd-d5f92cfc9838"]
+  }],
+  "urls": ["https://www.dropbox.com/", "https://www.dropbox.com/login"],
+  "plugins": []
+}
